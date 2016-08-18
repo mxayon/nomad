@@ -20,6 +20,11 @@ Vagabond implements the following technologies:
 + Sass
 + bcrypt
 
+James
+Sophia
+Paolo
+David
+
 ##All Rights Reserved, Nomad LLC 2016
 
 ![alt text](public/groupnomad.png)
