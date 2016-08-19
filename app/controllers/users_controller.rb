@@ -1,28 +1,27 @@
 class UsersController < ApplicationController
-
-  def index
-    render :index
-  end
-
   def new
     @user = User.new
     render :new
   end
 
   def create
-    @user = User.create(user_params)
-    login(@user)
-    redirect_to @user
+    user = User.new(user_params)
+    if user.save
+      redirect_to user_path(user.id)
+    else
+      redirect_to '/signup'
+    end
   end
 
   def show
-    p params[:id]
     @user = User.find_by_id(params[:id])
     render :show
   end
 
-  private
+private
+
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password_digest)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
+
 end
