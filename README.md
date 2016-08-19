@@ -4,11 +4,11 @@ Vagabond is a crowdsourced travel community app that allows users to create an a
 
 ## Entity Relationship Diagram
 
-![alt text](public/erd.png)
+![alt text](app/assets/images/erd.png)
 
 ## Wireframe
 
-![alt text](public/wireframe.png)
+![alt text](app/assets/images/wireframe.png)
 
 ## Technologies used
 
@@ -27,4 +27,4 @@ David
 
 ##All Rights Reserved, Nomad LLC 2016
 
-![alt text](public/groupnomad.png)
+![alt text](app/assets/images/groupnomad.png)
