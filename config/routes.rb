@@ -11,4 +11,13 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new", as: "login"
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy", as: "logout"
+    
+    #cities routes
+    get "/cities", to: "cities#index"
+    get "/cities/new", to: "cities#new", as: "new_city"
+    post "/cities", to: "cities#create"
+    get "/cities/:id", to: "cities#show", as: "city"
+    get "/cities/:id/edit", to:"cities#edit", as: "edit_city"
+    patch "/cities/:id", to: "cities#update"
+    delete "/cities/:id", to: "cities#destroy"
 end
