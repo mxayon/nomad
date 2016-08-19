@@ -1,0 +1,16 @@
+<h3>Edit Form</h3>
+<%= form_for @city do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+  <div>
+    <%= f.text_field :picture, placeholder: "Picture URL" %>
+  </div>
+  <div>
+    <%= f.text_area :description, placeholder: "Description" %>
+  </div>
+  <div>
+    <%= f.text_field :city_website, placeholder: "City Website" %>
+  </div>
+  <%= f.submit %>
+  <% end %>
