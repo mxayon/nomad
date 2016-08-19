@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nomad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <nav>
+     <div class="nav-wrapper">
+       <a href="/cities" class="brand-logo">Nomad</a>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a href="/login">Login</a></li>
+         <li><a href="/signup">Sign Up</a></li>
+         <li><a href="/logout">Log Out</a></li>
+         <li><a href="/cities/new">Post new city</a></li>
+       </ul>
+     </div>
+   </nav>
+ <br>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
+  <% if current_user %>
+    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+  <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+  <% end %>
   <%= yield %>
-
 </body>
 </html>
