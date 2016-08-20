@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20160820010928) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "city_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "city_users", ["city_id"], name: "index_city_users_on_city_id", using: :btree
+  add_index "city_users", ["user_id"], name: "index_city_users_on_user_id", using: :btree
+
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "city_id"
@@ -46,6 +56,8 @@ ActiveRecord::Schema.define(version: 20160820010928) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "city_users", "cities"
+  add_foreign_key "city_users", "users"
   add_foreign_key "posts", "cities"
   add_foreign_key "posts", "users"
 end
