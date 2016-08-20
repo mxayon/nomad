@@ -1,9 +1,8 @@
-<div><%= @user.first_name %> is a member of the following libraries</div>
-<% @posts.each do |post| %>
-  <div>
-   <h3><%= post.title %></h3>
-   <% if current_user %>
-   <% end %>
- </div>
- <br>
-<% end %>
+
+<br>Posts</br>
+<br />
+<ul>
+  <% @posts.each do |f| %>
+    <li> <%= f.content %> </li>
+  <% end %>
+</ul>

@@ -1,3 +1,4 @@
+
 <div>
  Welcome to <%= @city.name %>
 </div>
@@ -10,5 +11,7 @@
 <div>
  <%= @city.picture %>
 </div>
-<%= button_to "Delete", @city, method: :delete, data: { confirm: 'Are you sure?' }%>
-<%= button_to "Edit", edit_city_path(@city), method: :get %>
+<hr>
+<%= @posts.title %>
+<br />
+<%= @posts.content %>
