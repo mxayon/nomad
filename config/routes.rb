@@ -12,10 +12,12 @@ Rails.application.routes.draw do
     get "/logout", to: "sessions#destroy", as: "logout"
 
     #cities routes
-    get "/cities", to: "cities#index"
+    get "/cities", to: "cities#index", as: "cities"
     get "/cities/:id", to: "cities#show", as: "city"
 
     #post routes
     get "/users/:id/posts", to: "posts#index", as: "user_posts"
     get "/cities/:id/posts", to: "cities#index", as: "city_posts"
+    post "/posts/new", to: "posts#new", as: "new_post"
+    post "/posts", to: "posts#save"
 end

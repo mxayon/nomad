@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
 
-  def index
-    @posts = Post.all
-    render :index
+  def new
+    @post = Post.new
+    render :new
   end
 
+  def save
+
+  end
 end

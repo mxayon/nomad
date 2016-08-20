@@ -1,4 +1,4 @@
-
+<h3> City </h3>
 <div>
  Welcome to <%= @city.name %>
 </div>
@@ -11,7 +11,12 @@
 <div>
  <%= @city.picture %>
 </div>
+<div>
+  <%= button_to "New Post", new_post_path %>
+</div>
 <hr>
+<h4>Posts</h4>
 <%= @posts.title %>
 <br />
 <%= @posts.content %>
+<br>
