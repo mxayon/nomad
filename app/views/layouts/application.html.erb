@@ -7,7 +7,7 @@
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">Nomad</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><% if current_user %>Welcome,</li> <li><%= link_to "#{current_user.first_name}", current_user %> </li> <li> <%= link_to "Logout", '/logout' %></li> <li> <%= link_to "Cities", '/cities' %></li>        <li><% else %> <%= link_to 'Login', '/login' %></li><li> <%= link_to 'Signup', '/signup' %>
+        <li><% if current_user %>Welcome,</li> <li><%= link_to "#{current_user.first_name}", current_user %> </li> <li> <%= link_to "Cities", '/cities' %></li> <li> <%= link_to "Logout", '/logout' %></li> <li><% else %> <%= link_to 'Login', '/login' %></li><li> <%= link_to 'Signup', '/signup' %>
           <% end %></li>
         </ul>
       </div>
