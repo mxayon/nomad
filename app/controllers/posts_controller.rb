@@ -12,8 +12,14 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
     id = current_user[:id]
     post[:user_id] = id
-    city.posts.append(post)
-    redirect_to post_path
+    if post.save
+      flash[:success] = "Post is now online!"
+      city.posts.append(post)
+      redirect_to city_path
+    else
+      flash[:error] = post.errors.full_messages.join(", ")
+      redirect_to city_path
+    end
   end
 
   def show
