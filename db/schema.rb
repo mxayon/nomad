@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821221227) do
+ActiveRecord::Schema.define(version: 20160821221918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160821221227) do
     t.datetime "updated_at",      null: false
     t.string   "photo"
     t.string   "location"
+    t.string   "username"
   end
 
   add_foreign_key "city_users", "cities"

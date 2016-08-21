@@ -5,7 +5,8 @@ USERS = [
   email: "davidkim@switt.com",
   password_digest:  "$2a$10$IhBFOpRHZSsP/BFLWC.Ic.9CHwvh/tyVne7DrcPTKxH6OUqGfRcM2",
   photo: "http://i.imgur.com/49Iw8sS.jpg",
-  location: "Alameda"
+  location: "Alameda",
+  username: "iheartswitt"
 },
 {
   first_name: "Sophia",
@@ -13,7 +14,8 @@ USERS = [
   email: "sophianakpil@switt.com",
   password_digest:  "$2a$10$WnUKsCQcEAfqhHyfqLVovOaYt2glbp4xw0eLbjvixRxUxyYXKbvB.",
   photo: "http://i.imgur.com/49Iw8sS.jpg",
-  location: "The Sunset"
+  location: "The Sunset",
+  username: "yungsoph"
 },
 {
   first_name: "Paolo",
@@ -21,7 +23,8 @@ USERS = [
   email: "paolosese@switt.com",
   password_digest:  "$2a$10$u4ZLO23FqTKffhxJN6D25..X1EEDigUMAy/J23CGl1MaAwqEXB38y",
   photo: "http://i.imgur.com/49Iw8sS.jpg",
-  location: "Hayward"
+  location: "Hayward",
+  username: "gaykidmaadcity"
 },
 {
   first_name: "James",
@@ -29,7 +32,8 @@ USERS = [
   email: "jamesdelacruz@switt.com",
   password_digest:  "$2a$10$4IP3UySsfUR36oAZ1/UT/OVae7swOJkIfyHEIeFMxRvywizOP.yLm",
   photo: "http://i.imgur.com/49Iw8sS.jpg",
-  location: "San Jo"
+  location: "The Milly",
+  username: "yungdlc"
 }
 ]
 

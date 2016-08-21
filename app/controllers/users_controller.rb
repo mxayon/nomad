@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     user[:photo] = "http://i.imgur.com/49Iw8sS.jpg"
     if user.save
-      flash[:success] = "Welcome to #{:first_name}@switt.com, your account is now active yo"
+      flash[:success] = "Welcome to switt.com, your account is now active yo"
       login(user)
       redirect_to user_path(user.id)
     else
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :location, :username)
   end
 
 end
