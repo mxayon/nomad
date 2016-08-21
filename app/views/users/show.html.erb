@@ -1,11 +1,10 @@
 
-<h1> Profile Page </h1>
-<div>
- <h4> Welcome <%= @user.first_name %></h4>
-</div>
+<h1> Welcome <%= @user.first_name %> </h1>
+<img src="<%=@user.photo%>" style="height: 190px; width: 200px;">
 <hr>
 <% if @posts %>
-<h3>Posts</h3>
+<h3><%= @user.first_name %>'s Posts</h3>
+
 <%= @posts.title %>
 <br />
 <%= @posts.content %>
