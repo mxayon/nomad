@@ -1,12 +1,12 @@
 
 <h1> Profile Page </h1>
 <div>
-
  <h4> Welcome <%= @user.first_name %></h4>
 </div>
-
 <hr>
+<% if @posts %>
 <h3>Posts</h3>
 <%= @posts.title %>
 <br />
 <%= @posts.content %>
+<% end %>

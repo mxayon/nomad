@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     else
       redirect_to '/signup'
     end
+      login(user)
   end
 
   def show
