@@ -4,28 +4,32 @@ USERS = [
   last_name: "Kim",
   email: "davidkim@switt.com",
   password_digest:  "$2a$10$IhBFOpRHZSsP/BFLWC.Ic.9CHwvh/tyVne7DrcPTKxH6OUqGfRcM2",
-  photo: "http://i.imgur.com/49Iw8sS.jpg"
+  photo: "http://i.imgur.com/49Iw8sS.jpg",
+  location: "Alameda"
 },
 {
   first_name: "Sophia",
   last_name: "Nakpil",
   email: "sophianakpil@switt.com",
   password_digest:  "$2a$10$WnUKsCQcEAfqhHyfqLVovOaYt2glbp4xw0eLbjvixRxUxyYXKbvB.",
-  photo: "http://i.imgur.com/49Iw8sS.jpg"
+  photo: "http://i.imgur.com/49Iw8sS.jpg",
+  location: "The Sunset"
 },
 {
   first_name: "Paolo",
   last_name: "Sese",
   email: "paolosese@switt.com",
   password_digest:  "$2a$10$u4ZLO23FqTKffhxJN6D25..X1EEDigUMAy/J23CGl1MaAwqEXB38y",
-  photo: "http://i.imgur.com/49Iw8sS.jpg"
+  photo: "http://i.imgur.com/49Iw8sS.jpg",
+  location: "Hayward"
 },
 {
   first_name: "James",
   last_name: "de la Cruz",
   email: "jamesdelacruz@switt.com",
   password_digest:  "$2a$10$4IP3UySsfUR36oAZ1/UT/OVae7swOJkIfyHEIeFMxRvywizOP.yLm",
-  photo: "http://i.imgur.com/49Iw8sS.jpg"
+  photo: "http://i.imgur.com/49Iw8sS.jpg",
+  location: "San Jo"
 }
 ]
 

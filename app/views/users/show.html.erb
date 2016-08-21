@@ -3,6 +3,7 @@
 <hr>
 <% if @posts %>
 <h3><%= @user.first_name %>'s Posts</h3>
+<h4>posting from <%= @user.location %></h4>
 <% end %>
 
 <% @user.posts.order('created_at DESC').each do |post| %>
