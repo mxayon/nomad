@@ -1,4 +1,9 @@
-<div class="splash">
-  <img src="timelapse.gif">
-  <%= button_to "Cities", cities_path, method: :get %>
+<div class="jumbotron" style="background-image: url(timelapse.gif); height: 700px; max-height: 100%;max-width: 100%; background-position: center;background-repeat: no-repeat; background-size: cover;border: 1px solid black;">
+  <!-- <img src="timelapse.gif"> -->
+  <br>
+  <div class="container center">
+    <%= button_to cities_path, method: :get, :class => "btn  blue-grey lighten-1" do %>
+    cities
+    <% end %>
+  </div>
 </div>

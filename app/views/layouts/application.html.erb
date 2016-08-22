@@ -4,15 +4,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper indigo lighten-2">
       <a href="/" class="brand-logo">Nomad</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><% if current_user %>Welcome,</li> <li><%= link_to "#{current_user.first_name}", current_user %> </li> <li> <%= link_to "Cities", '/cities' %></li> <li> <%= link_to "Logout", '/logout' %></li> <li><% else %> <%= link_to 'Login', '/login' %></li><li> <%= link_to 'Signup', '/signup' %>
           <% end %></li>
         </ul>
-      </div>
-    </nav>
-    <br>
+    </div>
+  </nav>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
