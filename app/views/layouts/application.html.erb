@@ -4,10 +4,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <nav>
-    <div class="nav-wrapper indigo lighten-2">
-      <a href="/" class="brand-logo">Nomad</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><% if current_user %>Welcome,</li> <li><%= link_to "#{current_user.first_name}", current_user %> </li> <li> <%= link_to "Cities", '/cities' %></li> <li> <%= link_to "Logout", '/logout' %></li> <li><% else %> <%= link_to 'Login', '/login' %></li><li> <%= link_to 'Signup', '/signup' %>
+    <div class="nav-wrapper blue-grey lighten-3">
+      <a href="/" class="brand-logo center" style="font-weight: 600; font-size: 100px; background-image: url(http://i.imgur.com/LuXGJCb.gif); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0);">N O M A D</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" style="background-image: url(http://i.imgur.com/LuXGJCb.gif); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0);">
+
+        <li><% if current_user %> Welcome,</li>
+
+        <li> <%= link_to "#{current_user.first_name}", current_user %> </li>
+
+        <li> <%= link_to "Cities", '/cities' %></li> <li> <%= link_to "Logout", '/logout' %></li> <li><% else %> <%= link_to 'Login', '/login' %></li><li> <%= link_to 'Signup', '/signup' %>
           <% end %></li>
         </ul>
     </div>
