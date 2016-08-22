@@ -10,7 +10,7 @@
    <%= post.id %>
    <%= @city.id %>
    <p><%= post.content %></p>
-   <% if current_user %>
+   <% if current_user && current_user[:id] == post[:user_id] %>
    <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get %>
    <% end %>
   </div>
