@@ -6,7 +6,7 @@
   <nav>
     <div class="nav-wrapper blue-grey lighten-3">
       <a href="/" class="brand-logo center" style="font-weight: 600; font-size: 100px; background-image: url(http://i.imgur.com/LuXGJCb.gif); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0);">N O M A D</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down" style="background-image: url(http://i.imgur.com/LuXGJCb.gif); -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0);">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
 
         <li><% if current_user %> Welcome,</li>
 
@@ -23,7 +23,7 @@
 </head>
 <body>
     <% flash.each do |name, msg| %>
-      <div><%= msg %></div>
+      <div class="card-panel blue lighten-5"><%= msg %></div>
     <% end %>
     <%= yield %>
 </body>

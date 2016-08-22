@@ -12,13 +12,15 @@ class PostsController < ApplicationController
   end
   def create
     city = City.find_by_id(params[:id])
-    post_params = params.require(:post).permit(:title, :content, :picture)
     post = Post.new(post_params)
     id = current_user[:id]
     post[:user_id] = id
     if post.save
       flash[:success] = "Post is now online!"
       city.posts.append(post)
+      redirect_to city_path
+    else
+      flash[:error] = post.errors.full_messages.join(", ")
       redirect_to city_path
     end
   end
@@ -39,8 +41,8 @@ class PostsController < ApplicationController
     post_id = params[:post_id]
     @post = Post.find_by_id(post_id)
     if session[:user_id] == @post.user_id
-      @post.update_attributes(p_params)
-      flash[:notice] = "Successfully updated post!"
+      @post.update_attributes(post_params)
+      flash[:notice] = "Successfully updated post! YO"
       redirect_to city_path(@post.city.id)
     else
       redirect_to city_path(@post.city.id)
@@ -59,7 +61,7 @@ class PostsController < ApplicationController
 
   private
 
-  def p_params
+  def post_params
     params.require(:post).permit(:title, :content, :picture)
   end
 end
