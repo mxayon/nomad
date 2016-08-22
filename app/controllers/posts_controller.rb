@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:post_id])
     @city = City.find_by_id(params[:city_id])
     if session[:user_id] != @post.user_id
-      redirect_to city_path
+      redirect_to city_path(@city.id)
     end
   end
   def update
@@ -45,6 +45,7 @@ class PostsController < ApplicationController
       flash[:notice] = "Successfully updated post! YO"
       redirect_to city_path(@post.city.id)
     else
+      flash[:error] = post.errors.full_messages.join(", ")
       redirect_to city_path(@post.city.id)
     end
   end
