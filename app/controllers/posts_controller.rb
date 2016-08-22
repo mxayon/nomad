@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:post_id])
     @city = City.find_by_id(params[:city_id])
     if session[:user_id] != @post.user_id
-      redirect_to city_path(@city.id)
+      redirect_to city_path
     end
   end
   def update
