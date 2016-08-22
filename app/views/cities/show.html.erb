@@ -5,26 +5,25 @@
     <% if current_user %>
       <%= button_to "New Post", new_post_path, :class => "btn blue-grey lighten-3", method: :get %>
     <% end %>
-</div>
-<hr>
-<div class="container">
-  <div class="card large">
-    <% @city.posts.order('created_at DESC').each do |post| %>
-    <div class="card center">
-      <h2 class="header center"><%= post.title %></h2>
-      <img src="<%= post.picture %>" style="height: 400px; max-height: 100%; max-width: 100%;">
-      <div class="card-content">
-        <div class="card panel">
-          <p><%= post.content %></p>
-          <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
+    <div class="container">
+      <div class="card large">
+        <% @city.posts.order('created_at DESC').each do |post| %>
+        <div class="card center">
+          <h2 class="header center"><%= post.title %></h2>
+          <img src="<%= post.picture %>" style="height: 400px; max-height: 100%; max-width: 100%;">
+          <div class="card-content">
+            <div class="card panel">
+              <p><%= post.content %></p>
+              <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
+            </div>
+            <% if current_user && current_user[:id] == post[:user_id] %>
+            <div class="buttons">
+              <div style="float: left;"><%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get, :class => "btn blue-grey lighten-3" %></div>
+              <div style="float: left;"><%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue-grey lighten-3" do %> Delete</div>            <% end %>
+            <% end %>
+          </div>
         </div>
-        <% if current_user && current_user[:id] == post[:user_id] %>
-        <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get, :class => "btn blue-grey lighten-3"  %>
-        <%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue-grey lighten-3" do %> Delete
-        <% end %>
         <% end %>
       </div>
     </div>
-    <% end %>
-  </div>
 </div>
