@@ -1,18 +1,22 @@
 <h3> <%= @city.name %> </h3>
- <p>Website: <%= @city.city_website %> </p>
- <p>Description: <%= @city.description %> </p>
- <% if current_user %>
- <%= button_to "New Post", new_post_path %>
- <% end %>
- <hr><br>
- <% @city.posts.order('created_at DESC').each do |post| %>  <div class="postpicture" style="background-image: url(<%= post.picture %>); height: 200px; max-height: 100%; max-width: 70%; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid black;">
-   <h3><%= post.title %></h3>
-   <%= post.id %>
-   <%= @city.id %>
-   <p><%= post.content %></p>
-   <% if current_user && current_user[:id] == post[:user_id] %>
-   <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get %>
-   <% end %>
-  </div>
-  <br>
+<p>Website: <%= @city.city_website %> </p>
+<p>Description: <%= @city.description %> </p>
+<% if current_user %>
+<%= button_to "New Post", new_post_path %>
+<% end %>
+<hr><br>
+<% @city.posts.order('created_at DESC').each do |post| %>  <div class="postpicture" style="background-image: url(<%= post.picture %>); height: 200px; max-height: 100%; max-width: 70%; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid black;">
+  <h3><%= post.title %></h3>
+  <%= post.id %>
+  <%= @city.id %>
+  <p><%= post.content %></p>
+  <% if current_user && current_user[:id] == post[:user_id] %>
+  <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get %>
+  <%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "" do %> Delete
+
+  <% end %>
+  <% end %>
+</div>
+<br>
+
 <% end %>
