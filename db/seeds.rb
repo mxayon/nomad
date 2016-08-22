@@ -45,16 +45,22 @@ CITIES = [
   city_website: "http://sfgov.org/"
   },
   {
-  name: "Seattle",
-  description: "Rainy",
-  picture: "https://images8.alphacoders.com/370/370203.jpg",
-  city_website: "http://www.seattle.gov/"
+  name: "London",
+  description: "Has Big Ben",
+  picture: "http://tremendouswallpapers.com/wp-content/uploads/2014/12/england-london-01.jpg",
+  city_website: "http://www.visitlondon.com/#VAqlQTPbJTuE33ER.97"
   },
   {
   name: "New Orleans",
   description: "Mardi Gras",
   picture: "http://cdn.history.com/sites/2/2013/12/New-Orleans-Bourbon-St-H.jpeg",
   city_website: "http://www.neworleansonline.com/"
+  },
+  {
+  name: "Gibraltar",
+  description: "Giant Rock with tons of history",
+  picture: "https://www.azamaraclubcruises.com/sites/default/files/heros/gibraltar-united-kingdom.jpg",
+  city_website: "http://www.visitgibraltar.gi/"
   },
   {
   name: "Arecibo, Puerto Rico",
@@ -89,15 +95,29 @@ POSTS = [
   {
   user_id: 4,
   city_id: 4,
-  title: "Cueva del Indio, Arecibo, Puerto Rico",
-  content: "View Petroglyphs at Cueva del Indio in Arecibo",
-  picture: "http://www.elyunque.com/Caves/Puerto.Rico.coast.jpg"
+  title: "St. Michael's Cave",
+  content: "No visit to Gibraltar would be complete without seeing St. Michael's Cave. The largest of the island's more than 150 caves, St. Michael's Cave lies at least 274 meters above sea level and is crammed full of spectacular stalactites and stalagmites. First recorded in AD 45, the cave has many legends associated with it, including one suggesting the island is secretly connected to Africa via a 24-kilometer-long tunnel.",
+  picture: "http://www.planetware.com/photos-large/E/gibraltar-st-michaels-cave.jpg"
+  },
+  {
+  user_id: 3,
+  city_id: 2,
+  title: "French Quarter",
+  content: "The Vieux Carre or French Quarter of New Orleans, the old town center, extends along a crescent shaped bend on the Mississippi. It was prevalent in the entertainment quarter, which was demarcated by municipal ordinance in 1897 and marked out with red lamps, and in nearby Bourbon Street. ",
+  picture: "http://www.planetware.com/photos-large/USLA/louisiana-new-orleans-french-quarter.jpg"
+  },
+  {
+  user_id: 2,
+  city_id: 3,
+  title: "Big Ben",
+  content: "When the Jubilee line platforms of Westminster station were being constructed in the '90s, one of the biggest engineering concerns was how the excavation of the ground would affect nearby Big Ben, which stands only 34m away. ",
+  picture: "https://assets3.thrillist.com/v1/image/1677444/size/tmg-article_tall.jpg"
   },
   {
   user_id: 1,
-  city_id: 1,
-  title: "Cueva del Indio, Arecibo, Puerto Rico",
-  content: "View Petroglyphs at Cueva del Indio in Arecibo",
+  city_id: 5,
+  title: "Cueva la Ventana, Arecibo, Puerto Rico",
+  content: "Also checkout Petroglyphs at Cueva del Indio in Arecibo",
   picture: "http://www.elyunque.com/Caves/Puerto.Rico.coast.jpg"
   }
 ]
