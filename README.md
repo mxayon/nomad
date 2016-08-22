@@ -1,6 +1,8 @@
 # Nomad
 
-Vagabond is a crowdsourced travel community app that allows users to create an account, check into a city, write posts about locations within the city.
+Nomad is a crowdsourced travel community app that allows users to create and edit an account and write and edit posts about locations within the city of their choice.
+
+[Link to Nomad](https://nomad30.herokuapp.com/)
 
 ## Entity Relationship Diagram
 
@@ -10,21 +12,37 @@ Vagabond is a crowdsourced travel community app that allows users to create an a
 
 ![alt text](app/assets/images/wireframe.png)
 
+## Screenshot
+
+![alt text](app/assets/images/screenshot.PNG)
+
 ## Technologies used
 
-Vagabond implements the following technologies:
+Nomad implements the following technologies:
 + Ruby on Rails
-+ Bootstrap
-+ HTML, CSS, JavaScript
 + PostgreSQL
 + Sass
++ Materialize
++ HTML
 + bcrypt
 
-James
-Sophia
-Paolo
-David
+## Current features
 
-##All Rights Reserved, Nomad LLC 2016
+Users can:
++ Sign up and Login
++ View cities
++ Logged in users can write, edit, and delete their own posts about cities
 
-![alt text](app/assets/images/groupnomad.png)
+## Planned features
+
++ Users will be able to comment on individual posts
++ Admin privileges
++ Users will receive an account confirmation email when they sign up
++ Paperclip or Amazon services for direct image uploading
+
+## Project group members
+
++ [Sophia Nakpil](https://github.com/sophn11/)
++ [James de la Cruz](https://github.com/jamesdlc/)
++ [David Kim](https://github.com/WDIDavidKim/)
++ [Paolo Sese](https://github.com/jpaolosese/)

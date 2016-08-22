@@ -22,23 +22,12 @@
     </div>
 </div>
 
-<div class="card large">
-  <% @user.posts.order('created_at DESC').each do |post| %>
-    <h2 class="header center"><%= post.title %></h2>
-    <div class="card-image">
-      <div class="center">
-        <img src="<%= post.picture %>" style="height: 600px; max-height: 100%; max-width: 100%;">
-      </div>
-    </div>
-      <div class="card-stacked center">
-        <div class="card-content">
-          <p><%= post.content %></p>
-          <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
-          <div class="row center-align">
-            <%= link_to "Show", post_path(post) %>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
+<% @user.posts.order('created_at DESC').each do |post| %>
+<div class="card center">
+  <h2 class="header"><%= post.title %></h2>
+  <img src="<%= post.picture %>" style="height: 400px;" class="center">
+    <p><%= post.content %></p>
+    <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
+      <%= link_to "Show", post_path(post) %>
+<% end %>
 </div>
