@@ -12,10 +12,6 @@ Nomad is a crowdsourced travel community app that allows users to create and edi
 
 ![alt text](app/assets/images/wireframe.png)
 
-## Screenshot
-
-![alt text](app/assets/images/screenshot.PNG)
-
 ## Technologies used
 
 Nomad implements the following technologies:
