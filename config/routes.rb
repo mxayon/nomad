@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     get "/signup", to: "users#new", as: "new_user"
     post "/users", to: "users#create"
     get "/users/:id", to: "users#show", as: "user"
+    get "/users/:id/edit", to: "users#edit", as: "edit_user"
+    patch "/users/:id", to: "users#update"
     #sessions routes
     get "/login", to: "sessions#new", as: "login"
     post "/login", to: "sessions#create"
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
     get "/cities/:id", to: "cities#show", as: "city"
     #post routes
     get "/users/:id/posts", to: "posts#index", as: "user_posts"
-    post "/cities/:id/posts/new", to: "posts#new", as: "new_post"
+    get "/cities/:id/posts/new", to: "posts#new", as: "new_post"
     get "/cities/:id/posts", to: "cities#index", as: "city_posts"
     get "/cities/:id/posts/:id", to: "posts#show", as: "post"
     post "/cities/:id/posts", to: "posts#create"

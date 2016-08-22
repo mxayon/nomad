@@ -1,7 +1,6 @@
 <% @cities.each do |city| %>
-  <div class="citypicture" style="background-image: url(<%= city.picture %>); height: 400px; max-height: 100%; max-width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid black;">
-   <h3><%= city.name %></h3>
-   <%= link_to "Show", city_path(city.id) %>
+  <div class="citypicture" style="color:#fff;text-shadow:1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,0px 1px 0 #000,1px 0px 0 #000,0px -1px 0 #000,-1px 0px 0 #000;  background-image: url(<%= city.picture %>); height: 400px; max-height: 100%; max-width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid black;">
+   <h3 class="center"><%= link_to "#{city.name}", city_path(city.id), :class => "btn transparent" %></h3>
+   <p class="center"><%= city.description %></p>
   </div>
-  <br>
 <% end %>

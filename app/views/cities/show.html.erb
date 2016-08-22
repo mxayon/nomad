@@ -1,21 +1,30 @@
-<h3> <%= @city.name %> </h3>
-<p>Website: <%= @city.city_website %> </p>
-<p>Description: <%= @city.description %> </p>
-<% if current_user %>
-<%= button_to "New Post", new_post_path %>
-<% end %>
-<hr><br>
-<% @city.posts.order('created_at DESC').each do |post| %>  <div class="postpicture" style="background-image: url(<%= post.picture %>); height: 200px; max-height: 100%; max-width: 70%; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid black;">
-  <h3><%= post.title %></h3>
-  <p><%= post.content %></p>
-  <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
-  <% if current_user && current_user[:id] == post[:user_id] %>
-  <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get %>
-  <%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "" do %> Delete
-
-  <% end %>
-  <% end %>
+<div class="card panel center">
+  <h3> <%= @city.name %> </h3>
+  <p> <%= link_to "Visit #{@city.city_website}", "#{@city.city_website}" %> </p>
+  <p> <%= @city.description %> </p>
+    <% if current_user %>
+      <%= button_to "New Post", new_post_path, :class => "btn blue-grey lighten-3", method: :get %>
+    <% end %>
 </div>
-<br>
-
-<% end %>
+<hr>
+<div class="container">
+  <div class="card large">
+    <% @city.posts.order('created_at DESC').each do |post| %>
+    <div class="card center">
+      <h2 class="header center"><%= post.title %></h2>
+      <img src="<%= post.picture %>" style="height: 400px; max-height: 100%; max-width: 100%;">
+      <div class="card-content">
+        <div class="card panel">
+          <p><%= post.content %></p>
+          <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
+        </div>
+        <% if current_user && current_user[:id] == post[:user_id] %>
+        <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get, :class => "btn blue-grey lighten-3"  %>
+        <%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue-grey lighten-3" do %> Delete
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
