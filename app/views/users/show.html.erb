@@ -20,8 +20,6 @@
     </div>
 </div>
 
-
-
 <div class="card large">
   <% @user.posts.order('created_at DESC').each do |post| %>
     <h2 class="header"><%= post.title %></h2>
