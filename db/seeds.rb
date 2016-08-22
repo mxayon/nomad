@@ -114,8 +114,8 @@ POSTS = [
   picture: "https://assets3.thrillist.com/v1/image/1677444/size/tmg-article_tall.jpg"
   },
   {
-  user_id: 5,
-  city_id: 1,
+  user_id: 1,
+  city_id: 5,
   title: "Cueva la Ventana, Arecibo, Puerto Rico",
   content: "Also checkout Petroglyphs at Cueva del Indio in Arecibo",
   picture: "http://www.elyunque.com/Caves/Puerto.Rico.coast.jpg"

@@ -3,7 +3,7 @@
   <p> <%= link_to "Visit #{@city.city_website}", "#{@city.city_website}" %> </p>
   <p> <%= @city.description %> </p>
     <% if current_user %>
-      <%= button_to "New Post", new_post_path, :class => "btn blue-grey lighten-3" %>
+      <%= button_to "New Post", new_post_path, :class => "btn blue-grey lighten-3", method: :get %>
     <% end %>
 </div>
 <hr>
