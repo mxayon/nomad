@@ -19,10 +19,12 @@
           <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
         </div>
         <% if current_user && current_user[:id] == post[:user_id] %>
-        <%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get, :class => "btn blue-grey lighten-3"  %>
-        <%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue-grey lighten-3" do %> Delete
+        <div class="buttons">
+        <div style="float: left;"><%= button_to "Edit", edit_post_path(@city.id, post[:id]), method: :get, :class => "btn blue-grey lighten-3" %></div>
+        <div style="float: left;"><%= button_to "/cities/#{@city.id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn blue-grey lighten-3" do %> Delete</div>
         <% end %>
         <% end %>
+      </div>
       </div>
     </div>
     <% end %>
