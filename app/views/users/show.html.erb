@@ -1,33 +1,34 @@
 <div class="container">
-    <div class="col s12 m7">
-      <h2 class="header">Welcome, <%= @user.username %>!</h2>
-      <div class="card horizontal">
-        <div class="card-image">
-          <img src="<%=@user.photo%>" style="height: 190px; width: 200px;">
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <% if @posts %>
+  <div class="col s12 m7">
+    <h2 class="header">Welcome, <%= @user.username %>!</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="<%=@user.photo%>" style="height: 190px; width: 200px;">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <% if @posts %>
             <strong><%= @user.first_name %>'s Posts</strong>
             <p>posting from <%= @user.location %></p>
-            <% end %>
-          </div>
-          <div class="card-action">
-            <%= button_to edit_user_path(@user), method: :get, :class => "btn blue-grey lighten-3" do %>
-            Edit  <%= "#{@user.first_name}"  %>'s  Profile
-            <% end %>
-          </div>
+          <% end %>
+        </div>
+        <div class="card-action">
+          <%= button_to edit_user_path(@user), method: :get, :class => "btn blue-grey lighten-3" do %>
+            Edit  <%= @user.first_name  %>'s  Profile
+          <% end %>
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<% @user.posts.order('created_at DESC').each do |post| %>
-<div class="card center">
-  <h2 class="header"><%= post.title %></h2>
-  <img src="<%= post.picture %>" style="height: 400px;" class="center">
-    <p><%= post.content %></p>
-    <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
+  <% @posts.each do |post| %>
+    <div class="card center">
+      <h2 class="header"><%= post.title %></h2>
+      <img src="<%= post.picture %>" style="height: 400px;" class="center">
+      <p><%= post.content %></p>
+      <p><%= post.created_at.strftime("Post made %m/%d/%Y at %I:%M%p") %></p>
       <%= link_to "Show", post_path(post) %>
-<% end %>
+    </div>
+  <% end %>
+
 </div>

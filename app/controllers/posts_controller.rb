@@ -14,8 +14,7 @@ class PostsController < ApplicationController
 
   def create
     @post = @city.posts.new(post_params)
-    id = current_user[:id]
-    @post[:user_id] = id
+    current_user.posts << @post
     if @post.save
       flash[:success] = "Post is now online!"
       redirect_to city_path
@@ -26,6 +25,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = @user.posts
   end
 
   def edit
@@ -56,7 +56,7 @@ class PostsController < ApplicationController
   end
 
   def current_user_is_owner?
-    session[:user_id] == @post.user_id
+    current_user.id == @post.user_id
   end
 
   def set_city

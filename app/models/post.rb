@@ -10,4 +10,11 @@ class Post < ActiveRecord::Base
     presence: true,
     length: { minimum: 1, maximum: 10000 }
 
+  # default_scope { order('created_at DESC') }
+
+  def posts_descending
+    self.posts.order('created_at DESC')
+  end
+
+
 end

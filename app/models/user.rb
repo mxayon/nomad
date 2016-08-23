@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
     @user.try(:authenticate, params[:password])
   end
 
+  def posts_descending
+    self.posts.order('created_at DESC')
+  end
+
 end
